@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #heart {
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 30px;
+    background-color: black;
 }
 .fa-regular {
     font-size: 30px;
@@ -10,10 +17,17 @@
     text-align: center;
     width: 100%;
     font-size: 25px;
+    margin-top: 30px;
 }
 
 header {
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    height: 100px;
 }
 
 h3 {
@@ -23,3 +37,12 @@ h3 {
 p {
     padding: 40px;
 }
+
+main {
+    margin-top: 130px;
+}
+
+#divh2 {
+    margin-left: 35px;
+}
+
