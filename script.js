@@ -1,5 +1,5 @@
 const main = document.getElementsByTagName('main')[0];
-const divH2 = document.getElementById('divh2');
+const divBackground = document.querySelector('#btn-background');
 
 function createButton() {
     const buttonGrey = document.createElement('button');
@@ -9,9 +9,9 @@ function createButton() {
     buttonGrey.style.height = '40px';
     buttonGrey.style.borderRadius = '50%';
     buttonGrey.style.marginTop = '10px';
-    buttonGrey.style.border = '0';
+    buttonGrey.style.border = '1, solid, white';
     buttonGrey.style.margin = '5px';
-    divH2.appendChild(buttonGrey);
+    divBackground.appendChild(buttonGrey);
 
     const buttonPink = document.createElement('button');
     buttonPink.style.backgroundColor = 'pink';
@@ -20,9 +20,9 @@ function createButton() {
     buttonPink.style.height = '40px';
     buttonPink.style.borderRadius = '50%';
     buttonPink.style.marginTop = '10px';
-    buttonPink.style.border = '0';
+    buttonPink.style.border = '1, solid, white';
     buttonPink.style.margin = '5px';
-    divH2.appendChild(buttonPink);
+    divBackground.appendChild(buttonPink);
 
     const buttonBlack = document.createElement('button');
     buttonBlack.style.backgroundColor = 'black';
@@ -31,12 +31,24 @@ function createButton() {
     buttonBlack.style.height = '40px';
     buttonBlack.style.borderRadius = '50%';
     buttonBlack.style.marginTop = '10px';
-    buttonBlack.style.border = '0';
+    buttonBlack.style.border = '1, solid, white';
     buttonBlack.style.margin = '5px';
-    divH2.appendChild(buttonBlack);
+    divBackground.appendChild(buttonBlack);
 }
 createButton();
 
-function changeBackgroundColor() {
-    
+
+function changeBackgroundColor(event) {
+    const corBackground = event.target.style.backgroundColor;
+    main.style.backgroundColor = corBackground;
+
+    if (corBackground === 'black') {
+        main.style.color = 'white';
+    }
+    else {
+        main.style.color = 'black';
+    }
 }
+
+divBackground.addEventListener('click', changeBackgroundColor);
+
