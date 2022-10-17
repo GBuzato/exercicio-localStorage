@@ -62,4 +62,36 @@ function getBackground() {
         main.style.color = 'white';
     }
 }
-window.onload = getBackground();
+
+function createButtonsColor() {
+    const fontColorH4 = document.querySelector('#font-color');
+    const buttonColorRed = document.createElement('button');
+    buttonColorRed.style.backgroundColor = 'red';
+    buttonColorRed.style.borderRadius = '50%';
+    buttonColorRed.style.width = '40px';
+    buttonColorRed.style.height = '40px';
+    buttonColorRed.style.border = '1, solid, white';
+    fontColorH4.appendChild(buttonColorRed);
+
+    const buttonColorWhite = document.createElement('button');
+    buttonColorWhite.style.backgroundColor = 'white';
+    buttonColorWhite.style.borderRadius = '50%';
+    buttonColorWhite.style.width = '40px';
+    buttonColorWhite.style.height = '40px';
+    buttonColorWhite.style.border = '1, solid, white';
+    fontColorH4.appendChild(buttonColorWhite);
+
+    const buttonColorBlack = document.createElement('button');
+    buttonColorBlack.style.backgroundColor = 'Black';
+    buttonColorBlack.style.borderRadius = '50%';
+    buttonColorBlack.style.width = '40px';
+    buttonColorBlack.style.height = '40px';
+    buttonColorBlack.style.border = '1, solid, white';
+    fontColorH4.appendChild(buttonColorBlack);
+    
+}
+
+window.onload = function loadingFunctions() {
+    getBackground();
+    createButtonsColor();
+};
