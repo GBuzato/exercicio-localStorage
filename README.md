@@ -1,1 +1,1 @@
-# exercicio-localStorge
+# exercicio-localStorage
