@@ -48,7 +48,18 @@ function changeBackgroundColor(event) {
     else {
         main.style.color = 'black';
     }
+
+    localStorage.setItem('cor de fundo', corBackground);
 }
 
 divBackground.addEventListener('click', changeBackgroundColor);
 
+function getBackground() {
+    const background = localStorage.getItem('cor de fundo');
+    main.style.backgroundColor = background;
+
+    if (background === 'black') {
+        main.style.color = 'white';
+    }
+}
+window.onload = getBackground();
