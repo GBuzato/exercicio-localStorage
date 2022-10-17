@@ -64,14 +64,16 @@ function getBackground() {
 }
 
 function createButtonsColor() {
-    const fontColorH4 = document.querySelector('#font-color');
+    const divColor = document.querySelector('#btn-color');
+
     const buttonColorRed = document.createElement('button');
     buttonColorRed.style.backgroundColor = 'red';
     buttonColorRed.style.borderRadius = '50%';
     buttonColorRed.style.width = '40px';
     buttonColorRed.style.height = '40px';
     buttonColorRed.style.border = '1, solid, white';
-    fontColorH4.appendChild(buttonColorRed);
+    buttonColorRed.style.margin = '5px';
+    divColor.appendChild(buttonColorRed);
 
     const buttonColorWhite = document.createElement('button');
     buttonColorWhite.style.backgroundColor = 'white';
@@ -79,7 +81,8 @@ function createButtonsColor() {
     buttonColorWhite.style.width = '40px';
     buttonColorWhite.style.height = '40px';
     buttonColorWhite.style.border = '1, solid, white';
-    fontColorH4.appendChild(buttonColorWhite);
+    buttonColorWhite.style.margin = '5px';
+    divColor.appendChild(buttonColorWhite);
 
     const buttonColorBlack = document.createElement('button');
     buttonColorBlack.style.backgroundColor = 'Black';
@@ -87,8 +90,8 @@ function createButtonsColor() {
     buttonColorBlack.style.width = '40px';
     buttonColorBlack.style.height = '40px';
     buttonColorBlack.style.border = '1, solid, white';
-    fontColorH4.appendChild(buttonColorBlack);
-    
+    buttonColorBlack.style.margin = '5px';
+    divColor.appendChild(buttonColorBlack);
 }
 
 window.onload = function loadingFunctions() {
