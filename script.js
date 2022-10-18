@@ -63,8 +63,8 @@ function getBackground() {
     }
 }
 
+const divColor = document.querySelector('#btn-color');
 function createButtonsColor() {
-    const divColor = document.querySelector('#btn-color');
 
     const buttonColorRed = document.createElement('button');
     buttonColorRed.style.backgroundColor = 'red';
@@ -93,6 +93,13 @@ function createButtonsColor() {
     buttonColorBlack.style.margin = '5px';
     divColor.appendChild(buttonColorBlack);
 }
+const sectionColor = document.getElementById('content');
+function changeColor(event) {
+    const eventColor = event.target.style.backgroundColor;
+    sectionColor.style.color = eventColor;
+}
+
+divColor.addEventListener('click', changeColor);
 
 window.onload = function loadingFunctions() {
     getBackground();
