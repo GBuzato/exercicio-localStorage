@@ -93,10 +93,10 @@ function createButtonsColor() {
     buttonColorBlack.style.margin = '5px';
     divColor.appendChild(buttonColorBlack);
 }
-const sectionColor = document.getElementById('content');
+const sectionContents = document.getElementById('contents');
 function changeColor(event) {
     const eventColor = event.target.style.backgroundColor;
-    sectionColor.style.color = eventColor;
+    sectionContents.style.color = eventColor;
 
     localStorage.setItem('cor das letras', eventColor);
 }
@@ -105,8 +105,17 @@ divColor.addEventListener('click', changeColor);
 
 function getColorContent() {
     const colorEvent = localStorage.getItem('cor das letras');
-    sectionColor.style.color = colorEvent;
+    sectionContents.style.color = colorEvent;
 }
+
+const input = document.querySelector('#input-fontSize');
+const btnInput = document.querySelector('#to-apply');
+function buttonInput() {
+    const valueInput = input.value;
+    sectionContents.style.fontSize = `${valueInput}px`;
+}
+
+btnInput.addEventListener('click', buttonInput);
 
 window.onload = function loadingFunctions() {
     getBackground();
