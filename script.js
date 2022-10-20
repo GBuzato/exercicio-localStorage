@@ -113,12 +113,20 @@ const btnInput = document.querySelector('#to-apply');
 function buttonInput() {
     const valueInput = input.value;
     sectionContents.style.fontSize = `${valueInput}px`;
+
+    localStorage.setItem('tamanho da fonte', valueInput);
 }
 
 btnInput.addEventListener('click', buttonInput);
+
+function getFontSize() {
+    const fontSizeContents = localStorage.getItem('tamanho da fonte');
+    sectionContents.style.fontSize = `${fontSizeContents}px`;
+}
 
 window.onload = function loadingFunctions() {
     getBackground();
     createButtonsColor();
     getColorContent();
+    getFontSize();
 };
